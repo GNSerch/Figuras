@@ -1,0 +1,26 @@
+package org.serch;
+
+public class piramide_pro {
+    static void espacios(int x, int i) {
+        for (int j = 1; j <= x - i; j++) {
+            IO.print(' ');
+        }
+    }
+    static void asteriscos(int i) {
+        for (int k = 1; k <= 2 * i - 1; k++) {
+            IO.print('*');
+        }
+    }
+    static void rows(int rows) {
+        for (int i = 1; i <= rows; i++) {
+            espacios(rows, i);
+            asteriscos(i);
+            IO.println(' ');
+        }
+    }
+    void main() {
+        IO.println("Ingrese un número entero: ");
+        int triag = Integer.parseInt(IO.readln());
+        rows(triag);
+    }
+}
